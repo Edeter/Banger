@@ -228,10 +228,10 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 116
-  m_CollisionDetection: 3
+  m_CollisionDetection: 2
 --- !u!114 &188587992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Current: 0
-  MovementMagnitude: 1
+  MovementMagnitude: 20
 --- !u!1 &255199098
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,14 +442,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996259513}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 2.58, z: 4.8294287}
+  m_LocalRotation: {x: 0.6672252, y: 0.23411652, z: -0.23411652, w: 0.6672252}
+  m_LocalPosition: {x: 0, y: 2.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 843553192}
   m_Father: {fileID: 621123293}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: -38.67}
 --- !u!65 &996259515
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -522,12 +522,12 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 4
+  m_AngularDrag: 5
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 4
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &996259518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,10 +543,11 @@ MonoBehaviour:
   Current: 0
   target: {fileID: 996259517}
   pivot: {fileID: 843553192}
-  ax: {x: 0, y: 1, z: 0}
-  angles: 1
-  v: {x: 0, y: 0, z: 0}
   body: {fileID: 188587992}
+  SwordMagnitude: 5
+  DragSpeed: 0.1
+  Deadzone: 10
+  AngelAmont: 0.1
 --- !u!59 &996259519
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -555,10 +556,10 @@ HingeJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996259513}
   m_ConnectedBody: {fileID: 188587991}
-  m_Anchor: {x: 0, y: -4.9, z: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0.30365187, z: -0.4034556}
+  m_ConnectedAnchor: {x: 0, y: 0.3535534, z: -0.35355338}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -581,7 +582,7 @@ HingeJoint:
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
   m_MassScale: 20
-  m_ConnectedMassScale: 1
+  m_ConnectedMassScale: 200
 --- !u!1 &997388183
 GameObject:
   m_ObjectHideFlags: 0
